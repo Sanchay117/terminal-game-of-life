@@ -5,8 +5,6 @@ This repository contains **two scripted demonstrations** that satisfy the assign
 - **Tower of Hanoi** implemented in Bash with simple ASCII graphics
 - **Conway's Game of Life** implemented in Bash with simple terminal graphics
 
-It also includes an **optional GitHub Pages website** that presents browser-friendly versions of both demos for public sharing.
-
 ## Assignment Goal
 
 The assignment requested:
@@ -24,7 +22,7 @@ This project goes a little further by providing **both** challenge options in Ba
 - `life.sh` - Bash Conway's Game of Life demo
 - `index.html`, `style.css`, `script.js` - GitHub Pages website
 - `.github/workflows/pages.yml` - GitHub Actions deployment workflow
-- `report.tex` - LaTeX write-up for the assignment
+- `report.tex` - LaTeX write-up for the challenge
 
 ## Running The Bash Demos
 
@@ -80,7 +78,7 @@ The iterative logic is highlighted in:
 
 ## Optional Public Website
 
-The repository also includes a small static website that can be deployed with **GitHub Pages**. Since GitHub Pages cannot execute Bash in the browser, the site uses JavaScript versions of the demos for presentation, while the Bash scripts remain the core assignment deliverables.
+The repository also includes a small static website that has been deployed with **GitHub Pages** ([Link](https://sanchay117.github.io/terminal-game-of-life/)). Since GitHub Pages cannot execute Bash in the browser, the site uses JavaScript versions of the demos for presentation, while the Bash scripts remain the core assignment deliverables.
 
 ### What the website adds
 
