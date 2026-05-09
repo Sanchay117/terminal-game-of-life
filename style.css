@@ -251,6 +251,10 @@ code {
   color: var(--muted);
 }
 
+.notes {
+  margin-top: 1.25rem;
+}
+
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
