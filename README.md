@@ -76,7 +76,7 @@ The iterative logic is highlighted in:
 
 ![Game of Life terminal demo](./game_of_life.png)
 
-## Optional Public Website
+## Public Website
 
 The repository also includes a small static website that has been deployed with **GitHub Pages** ([Link](https://sanchay117.github.io/terminal-game-of-life/)). Since GitHub Pages cannot execute Bash in the browser, the site uses JavaScript versions of the demos for presentation, while the Bash scripts remain the core assignment deliverables.
 
