@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scripted Challenge Demos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">RISC-V Challenge Showcase</p>
+        <h1>Two classic algorithm demos, one tiny public site.</h1>
+        <p class="hero-copy">
+          This page presents browser-friendly versions of Tower of Hanoi and Conway's
+          Game of Life, while the original Bash scripts remain in the repository for
+          terminal execution.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="./hanoi.sh">View `hanoi.sh`</a>
+          <a class="button secondary" href="./life.sh">View `life.sh`</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="grid">
+          <article class="card">
+            <div class="card-heading">
+              <p class="section-label">Recursion Demo</p>
+              <h2>Tower of Hanoi</h2>
+            </div>
+            <p>
+              The Bash version highlights recursion in <code>solve_hanoi()</code>. This
+              browser view precomputes the move list and animates the peg state.
+            </p>
+
+            <div class="controls">
+              <label>
+                Disks
+                <input id="disk-count" type="range" min="3" max="7" value="4" />
+              </label>
+              <span id="disk-count-value" class="metric">4</span>
+              <button id="restart-hanoi" class="button secondary" type="button">
+                Restart
+              </button>
+            </div>
+
+            <div class="hanoi-board" id="hanoi-board" aria-label="Tower of Hanoi board"></div>
+            <p id="hanoi-status" class="status"></p>
+          </article>
+
+          <article class="card">
+            <div class="card-heading">
+              <p class="section-label">Iteration Demo</p>
+              <h2>Conway's Game of Life</h2>
+            </div>
+            <p>
+              The Bash version uses nested loops to count neighbors and update each cell.
+              This canvas simulation shows the same rule-based iteration in the browser.
+            </p>
+
+            <div class="controls">
+              <button id="toggle-life" class="button primary" type="button">Pause</button>
+              <button id="reset-life" class="button secondary" type="button">Reset</button>
+              <span id="life-generation" class="metric">Generation 0</span>
+            </div>
+
+            <canvas
+              id="life-canvas"
+              width="420"
+              height="420"
+              aria-label="Conway's Game of Life simulation"
+            ></canvas>
+          </article>
+        </section>
+
+        <section class="card notes">
+          <div class="card-heading">
+            <p class="section-label">Repository Notes</p>
+            <h2>How this is meant to be used</h2>
+          </div>
+          <ul>
+            <li>The terminal demos still live in <code>hanoi.sh</code> and <code>life.sh</code>.</li>
+            <li>The site is static, so GitHub Pages can host it without any server code.</li>
+            <li>The workflow in <code>.github/workflows/pages.yml</code> deploys this site automatically.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
